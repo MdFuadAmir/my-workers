@@ -1,8 +1,8 @@
 import { CgProfile } from "react-icons/cg";
 import { RiMenuFill } from "react-icons/ri";
 import { RiMenu3Fill } from "react-icons/ri";
-import { Link } from "react-router-dom";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const pages = [
     {
@@ -51,7 +51,8 @@ const Header = () => {
         {/* laptop device */}
         <div className="hidden md:flex items-center justify-center gap-6 font-semibold text-gray-500">
             {
-                pages.map(page => <Link to={page.path} key={page.id}>{page.name}</Link>)
+                pages.map(page => <NavLink className={({ isActive }) => isActive ? "text-green-400" : "text-gray-500"
+                  } to={page.path} key={page.id}>{page.name}</NavLink>)
             }
         </div>
         {/* mobile device */}
@@ -71,7 +72,7 @@ const Header = () => {
         {
             open ? <div className="font-bold text-xl gap-3 flex flex-col text-center bg-gray-400 rounded-md text-white">
             {
-                pages.map(page => <Link className="hover:bg-gray-200 p-4 hover:text-green-500 duration-300" to={page.path} key={page.id}>{page.name}</Link>)
+                pages.map(page => <NavLink className="hover:bg-gray-200 p-4 hover:text-green-500 duration-300" to={page.path} key={page.id}>{page.name}</NavLink>)
             }
             </div> : ""
         }
