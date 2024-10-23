@@ -1,5 +1,5 @@
 import { CgProfile } from "react-icons/cg";
-import { Link, useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 
 const WorkerDetails = () => {
