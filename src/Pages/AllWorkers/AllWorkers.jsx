@@ -1,5 +1,4 @@
 import { useLoaderData } from "react-router-dom";
-import Worker from "../../Components/Worker/Worker";
 import AllWorker from "../../Components/AllWorker/AllWorker";
 
 
